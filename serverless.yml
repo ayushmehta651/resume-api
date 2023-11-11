@@ -1,4 +1,4 @@
-service: blog-github-actions
+service: resume-api
 provider:
   name: aws
   runtime: python3.7
@@ -16,11 +16,11 @@ package:
     - node_modules/**
 
 functions:
-  get_joke:
-    handler: handler.get_joke
+  get_resume:
+    handler: handler.get_resume
     events:
       - http:
-          path: joke
+          path: resume
           method: get
 
 plugins:

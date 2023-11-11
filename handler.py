@@ -4,7 +4,7 @@ import boto3
 dynamodb = boto3.resource("dynamodb", region_name='eu-central-1')
 table=dynamodb.Table('Resumes')
 
-def handler(event, context):
+def get_resume(event, context):
 
     # fetch the json resume data using the id
     response = table.get_item(
