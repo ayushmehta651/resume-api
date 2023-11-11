@@ -1,0 +1,24 @@
+{
+  "name": "resume-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushmehta651/resume-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayushmehta651/resume-api/issues"
+  },
+  "homepage": "https://github.com/ayushmehta651/resume-api#readme",
+  "devDependencies": {
+    "serverless": "^3.36.0",
+    "serverless-python-requirements": "^6.0.1"
+  }
+}
