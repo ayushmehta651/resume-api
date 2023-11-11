@@ -1,13 +1,27 @@
-service: basic-serverless-lambda
+service: basic-serverless-lambda-python
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: python3.10
   stage: dev
-  region: eu-central-1
+  region: us-west-1
+
+plugins:
+  - serverless-python-requirements
+
+package:
+  individually: true
 
 functions:
-  lambda_function:
-    handler: lambda_function/lambda_handler.lambda_handler
-    timeout: 60 # seconds
+  theLambda:
+    name: test-lambda
+    handler: lambda.handler
+    description: test-lambda
+    timeout: 5 # seconds
     memorySize: 128 # mb
+    package:
+      patterns:
+        - "!node_modules/**"
+        - "!yarn.lock"
+        - "!package-lock.json"
+        - "!package.json"
